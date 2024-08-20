@@ -9,7 +9,7 @@
 from internal.progress import read_progress, reset_progress, save_progress
 from puzzles import level_one
 
-# ========== MAIN RUNNING SCRIPT
+# ========== MAIN RUNNING SCRIPT ==========
 
 def main():
     # Attempt to read what level the plater
