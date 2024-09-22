@@ -1,4 +1,4 @@
-# none of this works and i dont know why holy shit
+# none of this works and i dont know why :sob:
 import sys
 sys.path.append("../2024-Spring-Algos")
 from ..puzzles.part1  import *
