@@ -6,8 +6,10 @@
 
 # ========== IMPORTS ==========
 
+from internal.autotesting.part1_test import (array_shift_test,
+                                             fast_search_test, fizzbuzz_test,
+                                             monthly_crime_test, search_test)
 from internal.progress import read_progress, reset_progress, save_progress
-from puzzles import part1, part2, part3
 
 # ========== MAIN RUNNING SCRIPT ==========
 
@@ -30,8 +32,7 @@ def main():
             save_progress(1)
 
         if level == 1:
-            # TODO: replace the below with autotesting functions from the folder
-            if part1.fizzbuzz():
+            if fizzbuzz_test():
                 print("level one complete!")
                 save_progress(2)
 

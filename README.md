@@ -2,14 +2,17 @@
 
 Welcome, new detective to CC Investigations, the most appraised detective agency
 in Cee City! Poco's seen your potential and wants to hire you as a junior
-detective, but every good detective has to start somewhere. He's set up some 
+detective, but every good detective has to start somewhere. He's set up some
 training exercises for you and even a case for you to solve afterwards!
 
 ## Exercise information
+
 You may find something that looks like this in the files.
+
 ```py
 def function(n: int) -> list[str]
 ```
+
 This means that the function takes in a variable ``n`` of type ``int`` and returns a ``list`` with elements of type ``str``. The exact types and variable names will change depending on the question.
 
 To start, navigate to ``puzzles/part1.py`` and fill out the functions!
