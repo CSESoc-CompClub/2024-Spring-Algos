@@ -12,13 +12,13 @@ def palindrome(scramble: str) -> int:
 """ ------------------------------ Question 2 ------------------------------ """
 # possibilities of the safe - sieve
 # TODO
-def find_primes(costs: list[int], budget: int) -> int:
+def find_primes() -> int:
     return None
 
 """ ------------------------------ Question 3 ------------------------------ """
 # two sum but has to call find_primes
 # TODO
-def find_combination(costs: list[int], budget: int) -> int:
+def find_combination() -> int:
     return None
 
 """ ------------------------------ Question 4 ------------------------------ """

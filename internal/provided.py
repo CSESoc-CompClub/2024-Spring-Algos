@@ -49,7 +49,8 @@ def max_subarray(arr: list[int]) -> list[int]:
     result_array = arr[start_index: end_index + 1]
     return result_array
 
-# Sieve of Eratosthenes
+# Sieve of Eratosthenes. Returns a list of prime numbers less than a given 
+# positive integer.
 def generate_primes(n: int) -> list[int]:
     # Fill numbers list with odd numbers, marking evens as 0
     '''
@@ -74,8 +75,4 @@ def generate_primes(n: int) -> list[int]:
         while numbers[p - 2] == 0 and p < n:
             p += 1
 
-<<<<<<< HEAD:puzzles/provided.py
     return numbers
-=======
-    return numbers
->>>>>>> ryan/editing-eves:internal/provided.py
