@@ -1,8 +1,10 @@
+#!/usr/bin/env python3
+
 # none of this works and i dont know why holy shit
 import sys
 sys.path.append("../2024-Spring-Algos")
-from ..puzzles.part1  import *
-from ..solutions.part1_sol import *
+from puzzles.part1  import *
+from solutions.part1_sol import *
 
 # All tests in part 1 will be visible
 
@@ -12,15 +14,15 @@ def implemented_test(result: any, func: str) -> bool:
         return False
     return True
 
-def fizzbuzz_test():  
+def fizzbuzz_test():
     print("-------Testing fizzbuzz-------")
     # Check if the student implemented the function
     if not implemented_test(fizzbuzz(0), "Fizzbuzz"):
         return
-    
+
     # List of tests
     tests = [18, 0, 1, 100, 9999]
-    
+
     # Iterate over the tests and compare student's solution with our solution
     for i, test in enumerate(tests):
         student = fizzbuzz(test)

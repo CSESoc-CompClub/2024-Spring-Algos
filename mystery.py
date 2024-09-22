@@ -31,7 +31,7 @@ def main():
 
         if level == 1:
             # TODO: replace the below with autotesting functions from the folder
-            if part1.fizzbuzz():
+            if part1.fizzbuzz(50):
                 print("level one complete!")
                 save_progress(2)
 
