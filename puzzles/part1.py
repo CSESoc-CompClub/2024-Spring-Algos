@@ -1,4 +1,4 @@
-from internal.provided import *
+from internal.provided import linear_search
 
 # This is the first file intended to be completed.
 #

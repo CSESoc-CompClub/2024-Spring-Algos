@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-
-# none of this works and i dont know why holy shit
-import sys
-sys.path.append("../2024-Spring-Algos")
 from puzzles.part1  import *
 from solutions.part1_sol import *
 
@@ -14,11 +9,11 @@ def implemented_test(result: any, func: str) -> bool:
         return False
     return True
 
-def fizzbuzz_test():
+def fizzbuzz_test() -> bool:
     print("-------Testing fizzbuzz-------")
     # Check if the student implemented the function
     if not implemented_test(fizzbuzz(0), "Fizzbuzz"):
-        return
+        return False
 
     # List of tests
     tests = [18, 0, 1, 100, 9999]
@@ -31,11 +26,11 @@ def fizzbuzz_test():
             print(f"Test case {i} failed.")
             print(f"Your output: {student}")
             print(f"Expected output: {solution}")
-            exit()
+            return False
         else:
             print(f"Test case {i} passed!")
 
-fizzbuzz_test()
+    return True
 
 def array_shift_test():
     result = array_shift()
