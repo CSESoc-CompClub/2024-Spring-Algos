@@ -7,7 +7,7 @@
 # ========== IMPORTS ==========
 
 from internal.progress import read_progress, reset_progress, save_progress
-from puzzles import level_one
+from puzzles import part1, part2, aprt3
 
 # ========== MAIN RUNNING SCRIPT ==========
 
@@ -21,7 +21,7 @@ def main():
             level: int = read_progress(hash)
         except ValueError as e:
             print(f"Error: {e}")
-            print("Resetting game...")
+            print("Resetting progress...")
             reset_progress()
             level: int = 0
 
@@ -30,7 +30,7 @@ def main():
             save_progress(1)
 
         if level == 1:
-            if level_one.puzzle():
+            if part1.fizzbuzz():
                 print("level one complete!")
                 save_progress(2)
 
