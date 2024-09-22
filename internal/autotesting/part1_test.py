@@ -6,7 +6,7 @@
 
 from puzzles.part1  import *
 from solutions.part1_sol import *
-from generic_test import *
+from internal.autotesting.generic_test import *
 
 # ==============================================================================
 # ================================= QUESTION 1 =================================
@@ -47,8 +47,8 @@ def array_shift_test() -> bool:
     # List of tests
     tests = [[[1,2,3,4],3], [[1],2], [[],4], [[4,8,2,3],9], [[0,1,2,3,4,5,6,7,8,9],50]]
     for i, test in enumerate(tests):
-        student = array_shift(test)
-        solution = array_shift_sol(test)
+        student = array_shift(test[0], test[1])
+        solution = array_shift_sol(test[0], test[1])
         if (student != solution):
             print(f"Test case {i} with arr = {test[0]} & n = {test[1]} failed.")
             return compare_test(student, solution)

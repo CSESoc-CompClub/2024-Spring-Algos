@@ -1,5 +1,5 @@
 def implemented_test(result: any, func: str) -> bool:
-    print(f"-------Testing {func}-------")
+    print(f"------- Testing {func} -------")
     if (result == None):
         print(f"{func} not implemented.")
         return False
