@@ -7,7 +7,7 @@
 # ========== IMPORTS ==========
 
 from internal.progress import read_progress, reset_progress, save_progress
-from puzzles import part1, part2, aprt3
+from puzzles import part1, part2, part3
 
 # ========== MAIN RUNNING SCRIPT ==========
 
@@ -30,6 +30,7 @@ def main():
             save_progress(1)
 
         if level == 1:
+            # TODO: replace the below with autotesting functions from the folder
             if part1.fizzbuzz():
                 print("level one complete!")
                 save_progress(2)
