@@ -15,7 +15,7 @@ def function(n: int) -> list[str]
 
 This means that the function takes in a variable ``n`` of type ``int`` and returns a ``list`` with elements of type ``str``. The exact types and variable names will change depending on the question.
 
-To start, navigate to ``puzzles/part1.py`` and fill out the functions!
+To start, run ``mystery.py`` and navigate to ``puzzles/part1.py`` to fill out the functions!
 
 ## File layout
 

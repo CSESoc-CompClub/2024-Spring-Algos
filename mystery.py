@@ -28,17 +28,37 @@ def main():
             level: int = 0
 
         if level == 0:
-            print("hi0")
+            print("[storyline here]")
             save_progress(1)
+            
+        # =============================== Part 1 ===============================
 
         if level == 1:
             if fizzbuzz_test():
-                print("level one complete!")
                 save_progress(2)
-
-        if level > 1:
-            print(f"hi{level}")
-            save_progress(level + 1)
+        
+        if level == 2:
+            if array_shift_test():
+                save_progress(3)
+        
+        if level == 3:
+            if search_test():
+                save_progress(4)
+                
+        if level == 4:
+            if fast_search_test():
+                save_progress(5)
+        
+        if level == 5:
+            if monthly_crime_test():
+                print("All part 1 questions have been completed!")
+                print("[Storyline here]")
+                save_progress(6)
+        
+        # =============================== Part 2 ===============================
+        
+        
+        # =============================== Part 3 ===============================
 
     return
 

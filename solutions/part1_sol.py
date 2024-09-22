@@ -7,6 +7,8 @@ def fizzbuzz_sol(n: int) -> list[str]:
     return a
 
 def array_shift_sol(arr: list[int], k: int) -> list[int]:
+    if len(arr) == 0 or len(arr) == 1:
+        return arr
     k = k % len(arr)
     return arr[k-1:] + arr[:k-1]
 
