@@ -1,5 +1,8 @@
-from puzzles.part1 import *
-from solutions.part1_sol import *
+# none of this works and i dont know why holy shit
+import sys
+sys.path.append("../2024-Spring-Algos")
+from ..puzzles.part1  import *
+from ..solutions.part1_sol import *
 
 # All tests in part 1 will be visible
 
