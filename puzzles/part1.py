@@ -1,6 +1,6 @@
 from internal.provided import *
 
-# This is the first file containing material discussed directly in the lecture.
+# This is the first file intended to be completed.
 #
 # Welcome to your training! Poco's set up some functions for you to fill out
 # and work on your fundamental knowledge before you progress onto the case!
