@@ -10,6 +10,9 @@ from provided import *
 # numbers that are divisible by 3 or 5 but not numbers that are divisible by both.
 #
 # For example, if n = 18, then the returned list would be [3, 5, 6, 9, 10, 12].
+#
+# Assumptions: 
+#   n > 0
 
 def fizzbuzz(n: int) -> list[str]:   
     return None
@@ -19,6 +22,10 @@ def fizzbuzz(n: int) -> list[str]:
 #
 # For example, if you are given arr = [1,2,3,4] and k = 3, then the shifted list
 # would look like [2,3,4,1].
+#
+# Assumptions: 
+#   len(arr) >= 0
+#   n > 0
 
 def array_shift(arr: list[int], n: int) -> list[int]:
     return None
@@ -33,6 +40,9 @@ def array_shift(arr: list[int], n: int) -> list[int]:
 # For example, files = [2, 3, 5, 1, 4]. If file_to_find = 5 then the function
 # return 2, since arr[2] = 5. However, if file_to_find = 6, then the function 
 # would return -1, since there is no value 6 in the files array.
+#
+# Assumptions: 
+#   len(files) >= 0
 
 def search(files: list[int], file_to_find: int) -> int:
     return None
@@ -45,6 +55,9 @@ def search(files: list[int], file_to_find: int) -> int:
 # You have to find the file for Poco, but you have to do it quickly! The 
 # variables and problem is the same as the previous question, but now there 
 # is a 3 second time limit imposed on your function.
+#
+# Assumptions: 
+#   len(files) >= 0
 
 def fast_search(files: list[int], file_to_find: int) -> int:
     return None
@@ -63,6 +76,9 @@ def fast_search(files: list[int], file_to_find: int) -> int:
 # The span of *consecutive* months where crime rates were collectively the highest 
 # would be [1,3,4] since 1 + 3 + 4 = 8. This array is what you are required to return 
 # in the below function.
+#
+# Assumptions: 
+#   len(crime_rates) >= 0
 
 def monthly_crime(crime_rates: list[int]) -> list[int]:
     return None
