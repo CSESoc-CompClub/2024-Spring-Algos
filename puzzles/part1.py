@@ -1,4 +1,8 @@
 from internal.provided import linear_search
+from internal.provided import binary_search
+from internal.provided import max_subarray
+
+# Todo - move some of the story bloat to mystery.py + add a flag(?) that allows students to skip the story if they wish
 
 # This is the first file intended to be completed.
 #
@@ -14,7 +18,8 @@ from internal.provided import linear_search
 # Assumptions:
 #   n > 0
 
-def fizzbuzz(n: int) -> list[str]:
+def fizzbuzz(n: int) -> list[int]:
+    # Todo - complete this function!
     return None
 
 """ ------------------------------ Question 2 ------------------------------ """
@@ -28,6 +33,7 @@ def fizzbuzz(n: int) -> list[str]:
 #   n > 0
 
 def array_shift(arr: list[int], n: int) -> list[int]:
+    # Todo - complete this function!
     return None
 
 """ ------------------------------ Question 3 ------------------------------ """
@@ -45,6 +51,7 @@ def array_shift(arr: list[int], n: int) -> list[int]:
 #   len(files) >= 0
 
 def search(files: list[int], file_to_find: int) -> int:
+    # Todo - complete this function!
     return None
 
 """ ------------------------------ Question 4 ------------------------------ """
@@ -60,6 +67,7 @@ def search(files: list[int], file_to_find: int) -> int:
 #   len(files) >= 0
 
 def fast_search(files: list[int], file_to_find: int) -> int:
+    # Todo - complete this function!
     return None
 
 """ ------------------------------ Question 5 ------------------------------ """
@@ -79,6 +87,10 @@ def fast_search(files: list[int], file_to_find: int) -> int:
 #
 # Assumptions:
 #   len(crime_rates) >= 0
+#
+# Hint: you only have to call one function to complete this task. Look at the
+# cheatsheet to see which function could work here!
 
 def monthly_crime(crime_rates: list[int]) -> list[int]:
+    # Todo - complete this function!
     return None

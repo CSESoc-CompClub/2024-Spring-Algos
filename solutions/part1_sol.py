@@ -1,5 +1,5 @@
 from internal.provided import *
-def fizzbuzz_sol(n: int) -> list[str]:
+def fizzbuzz_sol(n: int) -> list[int]:
     a = []
     for i in range(n):
         if ((i % 3 == 0 or i % 5 == 0) and not (i % 3 == 0 and i % 5 == 0)):

@@ -49,18 +49,9 @@ def max_subarray(arr: list[int]) -> list[int]:
     result_array = arr[start_index: end_index + 1]
     return result_array
 
-# Sieve of Eratosthenes. Returns a list of prime numbers less than a given 
-# positive integer.
+# Returns a list of prime numbers less than a given positive integer.
 def generate_primes(n: int) -> list[int]:
     # Fill numbers list with odd numbers, marking evens as 0
-    '''
-    numbers = []
-    for i in range(2, n):
-        if (i % 2 == 0):
-            numbers.append(0)
-        else:
-            numbers.append(i)
-    '''
     numbers = [i if (i % 2 != 0 or i == 2) else 0 for i in range(2, n)]
 
     # Sieve of Erathosthenes Algorithm
@@ -76,3 +67,10 @@ def generate_primes(n: int) -> list[int]:
             p += 1
 
     return numbers
+
+# Print out all non-zero elements of a number array
+def print_primes(nums: list[int]) -> None:
+    if len(nums) > 0:
+        print(f'Primes are: {", ".join([str(n) for n in nums if n != 0])}.')
+    else:
+        print(f'Empty primes list given.')
