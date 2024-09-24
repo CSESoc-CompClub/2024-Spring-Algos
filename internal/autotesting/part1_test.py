@@ -4,13 +4,13 @@
 # =================================== IMPORTS ==================================
 # ==============================================================================
 
-import multiprocessing.process
 from puzzles.part1  import *
 from solutions.part1_sol import *
 from internal.autotesting.generic_test import *
 from typing import Callable
-import multiprocessing
+from enum import Enum
 import random
+import timeit
 
 # ==============================================================================
 # ================================= QUESTION 1 =================================
@@ -81,25 +81,6 @@ def search_test() -> bool:
 # ================================= QUESTION 4 =================================
 # ==============================================================================
 
-# returns whether the search function written by the student passed
-# the time limit (True if passed, False if not passed)
-def timer(func: Callable[[], bool], time: int = 3) -> bool:
-    ret = False
-    
-    def wrapper():
-        nonlocal ret
-        ret = func()
-    
-    p = multiprocessing.Process(target=wrapper)
-    p.start()
-    p.join(time)
-    
-    if p.is_alive():
-        p.kill()
-        return False
-    
-    return ret
-
 def fast_search_test() -> bool:
     name = "fast_search"    
     
@@ -107,17 +88,24 @@ def fast_search_test() -> bool:
     if not implemented_test(fast_search([],0), name):
         return False
     
-    arr_length = 100_000
-    arr = list(set(random.sample(range(1, arr_length + 1), arr_length)))
+    arr_length = 5_000_000
+    arr = random.sample(range(1, arr_length + 1), arr_length)
     arr.sort()
     
     test1_target = random.choice(arr)
-    tests = [[arr, test1_target, arr.index(test1_target)], [arr, arr_length + 1, -1], [[], 1, -1]]
+    tests = [[arr, test1_target, arr.index(test1_target)], [arr, -1, -1], [[], 1, -1]]
     
     for i, test in enumerate(tests):
         [files, target, expected] = test
-        if not timer(lambda: fast_search(files, target) == expected):
-            print(f"Your {name} function took over 3 seconds! Test failed.")
+        
+        start_time = timeit.default_timer()
+        res = fast_search(files, target)
+        
+        if timeit.default_timer() - start_time > 0.1:
+            print(f"Your {name} function took over 0.1 seconds! Test failed.")
+            return False
+        elif res != expected:
+            print(f"Your {name} function returned the incorrect result! Test failed.")
             return False 
         else:
             print(f"Test case {i} passed!")

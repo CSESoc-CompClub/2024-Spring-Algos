@@ -61,14 +61,14 @@ def search(files: list[int], file_to_find: int) -> int:
 #
 # You have to find the file for Poco, but you have to do it quickly! The
 # variables and problem is the same as the previous question, but now there
-# is a 3 second time limit imposed on your function.
+# is a 1 second time limit imposed on your function.
 #
 # Assumptions:
-#   len(files) >= 0
+#   The files array is sorted in ascending order
 
 def fast_search(files: list[int], file_to_find: int) -> int:
     # Todo - complete this function!
-    return binary_search(files, file_to_find)
+    return linear_search(files, file_to_find)
 
 """ ------------------------------ Question 5 ------------------------------ """
 # Poco's notes that the crime rate in Cee City fluctuates over the year, and he
