@@ -16,7 +16,6 @@ def search_sol(files: list[int], file_to_find: int) -> int:
     return linear_search(files)
 
 def fast_search_sol(files: list[int], file_to_find: int) -> int:
-    files.sort()
     return binary_search(files)
 
 def monthly_crime_sol(crimeRates: list[int]) -> list[int]:

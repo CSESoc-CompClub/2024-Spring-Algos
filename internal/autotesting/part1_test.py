@@ -93,7 +93,7 @@ def fast_search_test() -> bool:
     
     # TODO - dev: add 2 LARGE tests case (with and without targets) to make sure the student stays under the 3 second time limit
     # feel free to modify the below however you see fit to get things to work
-    tests = [[[2,3,5,1,4],5], [[2,3,5,1,4],6], [[],1], "large test with target", "large test without target"]
+    tests = [[[1,2,3,4,5],5], [[1,2,3,4,5],6], [[],1], "large test with target", "large test without target"]
     for i, test in enumerate(tests):
         if not timer(test):
             print(f"Your {name} function took over 3 seconds! Test failed.")

@@ -64,7 +64,7 @@ def search(files: list[int], file_to_find: int) -> int:
 # is a 3 second time limit imposed on your function.
 #
 # Assumptions:
-#   len(files) >= 0
+#   The files array is sorted in ascending order
 
 def fast_search(files: list[int], file_to_find: int) -> int:
     # Todo - complete this function!
