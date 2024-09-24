@@ -68,7 +68,7 @@ def search(files: list[int], file_to_find: int) -> int:
 
 def fast_search(files: list[int], file_to_find: int) -> int:
     # Todo - complete this function!
-    return None
+    return binary_search(files, file_to_find)
 
 """ ------------------------------ Question 5 ------------------------------ """
 # Poco's notes that the crime rate in Cee City fluctuates over the year, and he

@@ -4,9 +4,13 @@
 # =================================== IMPORTS ==================================
 # ==============================================================================
 
+import multiprocessing.process
 from puzzles.part1  import *
 from solutions.part1_sol import *
 from internal.autotesting.generic_test import *
+from typing import Callable
+import multiprocessing
+import random
 
 # ==============================================================================
 # ================================= QUESTION 1 =================================
@@ -79,10 +83,22 @@ def search_test() -> bool:
 
 # returns whether the search function written by the student passed
 # the time limit (True if passed, False if not passed)
-def timer(func) -> bool:
-    # TODO - dev: implement this
-    # If time > 3 seconds, fail the test
-    pass
+def timer(func: Callable[[], bool], time: int = 3) -> bool:
+    ret = False
+    
+    def wrapper():
+        nonlocal ret
+        ret = func()
+    
+    p = multiprocessing.Process(target=wrapper)
+    p.start()
+    p.join(time)
+    
+    if p.is_alive():
+        p.kill()
+        return False
+    
+    return ret
 
 def fast_search_test() -> bool:
     name = "fast_search"    
@@ -91,11 +107,16 @@ def fast_search_test() -> bool:
     if not implemented_test(fast_search([],0), name):
         return False
     
-    # TODO - dev: add 2 LARGE tests case (with and without targets) to make sure the student stays under the 3 second time limit
-    # feel free to modify the below however you see fit to get things to work
-    tests = [[[2,3,5,1,4],5], [[2,3,5,1,4],6], [[],1], "large test with target", "large test without target"]
+    arr_length = 100_000
+    arr = list(set(random.sample(range(1, arr_length + 1), arr_length)))
+    arr.sort()
+    
+    test1_target = random.choice(arr)
+    tests = [[arr, test1_target, arr.index(test1_target)], [arr, arr_length + 1, -1], [[], 1, -1]]
+    
     for i, test in enumerate(tests):
-        if not timer(test):
+        [files, target, expected] = test
+        if not timer(lambda: fast_search(files, target) == expected):
             print(f"Your {name} function took over 3 seconds! Test failed.")
             return False 
         else:

@@ -1,4 +1,5 @@
 from internal.provided import *
+
 def fizzbuzz_sol(n: int) -> list[int]:
     a = []
     for i in range(n):
