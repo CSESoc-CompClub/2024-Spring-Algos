@@ -18,5 +18,5 @@ def search_sol(files: list[int], file_to_find: int) -> int:
 def fast_search_sol(files: list[int], file_to_find: int) -> int:
     return binary_search(files)
 
-def monthly_crime_sol(crimeRates: list[int]) -> list[int]:
-    return max_subarray(crimeRates)
+def monthly_crime_sol(crime_rates: list[int]) -> list[int]:
+    return max_subarray(crime_rates)

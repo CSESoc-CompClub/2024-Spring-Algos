@@ -31,7 +31,7 @@ def fizzbuzz_test() -> bool:
             return compare_test(student, solution)
         else:
             print(f"Test case {i} passed!")
-    return passed_test(name, 1)
+    return passed_test(name, Qid[name])
 
 # ==============================================================================
 # ================================= QUESTION 2 =================================
@@ -55,7 +55,7 @@ def array_shift_test() -> bool:
         else:
             print(f"Test case {i} passed!")
     
-    return passed_test(name, 2)
+    return passed_test(name, Qid[name])
 
 # ==============================================================================
 # ================================= QUESTION 3 =================================
@@ -71,7 +71,7 @@ def search_test() -> bool:
     # TODO - internals: complete this
     tests = []
     
-    return passed_test(name, 3)
+    return passed_test(name, Qid[name])
 
 # ==============================================================================
 # ================================= QUESTION 4 =================================
@@ -101,7 +101,7 @@ def fast_search_test() -> bool:
         else:
             print(f"Test case {i} passed!")
     
-    return passed_test(name, 4)
+    return passed_test(name, Qid[name])
 
 
 # ==============================================================================
@@ -118,4 +118,4 @@ def monthly_crime_test() -> bool:
     # TODO - internals: complete this
     tests = []
     
-    return passed_test(name, 5)
+    return passed_test(name, Qid[name])
