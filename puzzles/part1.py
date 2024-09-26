@@ -2,12 +2,9 @@ from internal.provided import linear_search
 from internal.provided import binary_search
 from internal.provided import max_subarray
 
-# Todo - move some of the story bloat to mystery.py + add a flag(?) that allows students to skip the story if they wish
-
 # This is the first file intended to be completed.
 #
-# Welcome to your training! Poco's set up some functions for you to fill out
-# and work on your fundamental knowledge before you progress onto the case!
+
 
 """ ------------------------------ Question 1 ------------------------------ """
 # From 0 to a given number n (exclusive), return an array containing all the
@@ -43,14 +40,14 @@ def array_shift(arr: list[int], n: int) -> list[int]:
 # The files are represented in the form of an array, and you are required
 # to return the index of the file, or -1 if the file could not be found.
 #
-# For example, files = [2, 3, 5, 1, 4]. If file_to_find = 5 then the function
-# return 2, since arr[2] = 5. However, if file_to_find = 6, then the function
+# For example, files = [2, 3, 5, 1, 4]. If target = 5 then the function
+# return 2, since arr[2] = 5. However, if target = 6, then the function
 # would return -1, since there is no value 6 in the files array.
 #
 # Assumptions:
 #   len(files) >= 0
 
-def search(files: list[int], file_to_find: int) -> int:
+def search(files: list[int], target: int) -> int:
     # Todo - complete this function!
     return None
 
@@ -59,14 +56,14 @@ def search(files: list[int], file_to_find: int) -> int:
 # of files to look through. Judging by the size, looking through all of them
 # individually would have you stuck at the office for the next 3 decades.
 #
-# You have to find the file for Poco, but you have to do it quickly! The
+# You have to find the target file for Poco, but you have to do it quickly! The
 # variables and problem is the same as the previous question, but now there
 # is a 3 second time limit imposed on your function.
 #
 # Assumptions:
 #   The files array is sorted in ascending order
 
-def fast_search(files: list[int], file_to_find: int) -> int:
+def fast_search(files: list[int], target: int) -> int:
     # Todo - complete this function!
     return None
 

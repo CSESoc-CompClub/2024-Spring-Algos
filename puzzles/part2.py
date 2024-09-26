@@ -1,58 +1,93 @@
-from internal.provided import *
-from puzzles.part1 import *
+from internal.provided import generate_primes, print_primes
 
-# Todo - move some of the story bloat to mystery.py + add a flag(?) that allows students to skip the story if they wish
+# This is the second file intended to be completed. 
 
-# This is the second file intended to be completed. You may call any functions 
-# you completed previously, whether it be in part 2 or part 1.
-
-""" ------------------------------ Question 1 ------------------------------ """
-# The location of Ob's safe has been identified, but now we have to crack it. 
-# Unfortunately for us, Ob's safe password includes a combination of numbers and 
-# letters, so our safe cracking efforts will need to be smart and efficient.
-# 
-# Ob mentioned once to Poco that his passwords were palindromes since they were
-# easier to remember. As such, Poco's wants you to implement a function that 
-# determines whether a given string is a palindrome.
+""" ------------------------------ Question 6 ------------------------------ """
+# Poco's wants you to implement a function that determines whether a given number is a palindrome.
 #
-# A palindrome is something that is the same backwards as it is forwards. For
-# example, "racecar" is a palindrome. The function should return true if the string
+# A palindrome is something that is the same backwards as it is forwards. 
+# 
+# For example, "12321" is a palindrome. The function should return true if the number
 # is a palindrome and false if not.
 #
-# Note that the string can include numbers, letters and other symbols.
+# Assumptions:
+#   Password wil be provided 
 
-def is_palindrome(string: str) -> bool:
+def is_palindrome(password: int) -> bool:
     # Todo - complete this function!
     return None
 
-""" ------------------------------ Question 2 ------------------------------ """
-# After digging through more of Ob's files, we've discovered another quirk of 
-# Ob's passwords. 
+""" ------------------------------ Question 7 ------------------------------ """
+# Now Poco needs you to write an algorithm that'll return the nth prime number.
+#
+# As an example, if n = 4, find_primes would return 7 as it is the fourth prime 
+# number since you have [2,3,4,7] 
+#
+# Assumptions:
+#   n > 0
 
-# possibilities of the safe - sieve
-# TODO
-def find_primes() -> int:
+def find_primes(n: int) -> int:
+    # Todo - complete this function!
     return None
 
-""" ------------------------------ Question 3 ------------------------------ """
-# two sum but has to call find_primes
-# TODO
-def find_combination() -> int:
+""" ------------------------------ Question 8 ------------------------------ """
+# You are required to implement the function has_combation, which will return true 
+# if there are two numbers in the list form of password that sum up to n, 
+# and false if otherwise.
+#
+# For example, if you were given password = 30193072 and n = 75, you would first 
+# convert 30193072 into [3, 193, 72] then there would be two numbers 72 and 3 
+# that sum up to 75, so has_combination would return true. 
+# 
+# Alternatively, if n = 76, then there are no two numbers in the list [3, 193, 72]
+# so has_combination will return false.
+#
+# Assumptions/restrictions:
+#   You may not use the same element twice - e.g. if you have the list
+#   [1, 2, 3] and n = 6, you cannot have 3+3 as a sum so has_combination 
+#   would return false.
+
+def has_combination(password: int, n: int) -> bool:
+    # Todo - complete this function!
     return None
 
-""" ------------------------------ Question 4 ------------------------------ """
-# list rotation (can use part1 function)
-# calls find_combination to determine how much to rotate list by and some other
-# parv's algos go here
-# TODO
-def safe_cracking():
-    # choose between palindrome, isogram or 
+""" ------------------------------ Question 9 ------------------------------ """
+# We know that Ob's passwords:
+#   1. Are palindromes
+#   2. Contains the nth prime number the password's list form
+#   3. Contains two numbers that sum up to a given number in the password's list form
+# 
+# Example cases:
+#   password = 3031202907, nth_prime = 4, prime_sum = 3
+#     1. This is not a palindrome
+#     2. The list form [3, 312, 29, 7] contains the 4th prime number 7
+#     3. There are no two numbers that sum up to 3
+#     This is not the password as it fails condition 1 & 3
+#
+#   password = 303101303, nth_prime = 3, prime_sum = 33
+#     1. This is a palindrome
+#     2. The list form [3, 31, 13, 3] does not contain the 3rd prime number 5
+#     3. There are two numbers (31, 3) that sum up to 33
+#     This is not the password as it fails condition 2 
+#
+# Assumptions:
+#   - There will always be only be one valid password in the passwords array
+
+def safe_cracking(passwords: int, nth_prime: int, prime_sum: int) -> int:
+    # Todo - complete this function!
     return None
 
-""" ------------------------------ Question 5 ------------------------------ """
-# given a list of item where each slot represents the cost of the item and a budget,
-# determine the maximum amount of items that can be bought with the budget
-# [some storyline things here]
-# TODO
-def max_buy(costs: list[int], budget: int) -> int:
+""" ------------------------------ Question 10 ----------------------------- """
+# You are to implement an algorithm that'll return the maximum amount of 
+# items a shipping container with k weight can hold. 
+# 
+# For example, items = [4, 7, 4, 3, 5], where each element representing the 
+# weight of an item. If weight = 13, then the maximum weight of the 
+# shipping container is 13. Therefore, max_items would return 3, since you 
+# can have items of weights 3, 4 and 4 which sums up to 11.
+#
+# Assumptions:
+#   weight > 0
+def max_items(items: list[int], weight: int) -> int:
+    # Todo - complete this function!
     return None
