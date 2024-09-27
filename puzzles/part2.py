@@ -88,6 +88,7 @@ def safe_cracking(passwords: int, nth_prime: int, prime_sum: int) -> int:
 #
 # Assumptions:
 #   weight > 0
+
 def max_items(items: list[int], weight: int) -> int:
     # Todo - complete this function!
     return None
