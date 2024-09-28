@@ -9,7 +9,8 @@ Qid = {
     "find_primes": 7,
     "has_combination": 8,
     "safe_cracking": 9,
-    "max_items": 10
+    "max_items": 10,
+    "coin_change": 11,
 }
 
 def print_divider():

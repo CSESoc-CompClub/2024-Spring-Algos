@@ -14,7 +14,6 @@ from internal.provided import generate_primes, print_primes
 #   Password wil be provided 
 
 def is_palindrome(password: int) -> bool:
-    # Todo - complete this function!
     return None
 
 """ ------------------------------ Question 7 ------------------------------ """
@@ -24,10 +23,9 @@ def is_palindrome(password: int) -> bool:
 # number since you have [2,3,4,7] 
 #
 # Assumptions:
-#   n > 0
+#   0 < n < 100
 
 def find_primes(n: int) -> int:
-    # Todo - complete this function!
     return None
 
 """ ------------------------------ Question 8 ------------------------------ """
@@ -48,7 +46,6 @@ def find_primes(n: int) -> int:
 #   would return false.
 
 def has_combination(password: int, n: int) -> bool:
-    # Todo - complete this function!
     return None
 
 """ ------------------------------ Question 9 ------------------------------ """

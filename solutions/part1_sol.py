@@ -12,11 +12,11 @@ def array_shift_sol(arr: list[int], n: int) -> list[int]:
     n = n % len(arr)
     return arr[n-1:] + arr[:n-1]
 
-def search_sol(files: list[int], file_to_find: int) -> int:
-    return linear_search(files)
+def search_sol(files: list[int], target: int) -> int:
+    return linear_search(files, target)
 
-def fast_search_sol(files: list[int], file_to_find: int) -> int:
-    return binary_search(files)
+def fast_search_sol(files: list[int], target: int) -> int:
+    return binary_search(files, target)
 
 def monthly_crime_sol(crime_rates: list[int]) -> list[int]:
     return max_subarray(crime_rates)

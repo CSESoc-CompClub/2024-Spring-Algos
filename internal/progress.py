@@ -1,6 +1,6 @@
 from hashlib import sha256
 
-LEVELS: list[int] = list(range(3))
+LEVELS: list[int] = list(range(13))
 
 def save_progress(level: int):
     hash: str = level_to_hash(level)

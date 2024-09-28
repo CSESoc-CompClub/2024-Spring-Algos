@@ -13,6 +13,7 @@ from internal.autotesting.part1_test import (array_shift_test,
 from internal.autotesting.part2_test import (is_palindrome_test,
                                              find_primes_test, has_combination_test,
                                              safe_cracking_test, max_items_test)
+from internal.autotesting.part3_test import coin_change_test
 from internal.progress import read_progress, reset_progress, save_progress
 
 # ========== MAIN RUNNING SCRIPT ==========
@@ -21,7 +22,7 @@ def main(test_level: (int | None)):
     if test_level != None:
         run_levels(int(test_level))
     else:
-        # Attempt to read what level the plater
+        # Attempt to read what level the user is one
         with open("progress.txt", "r") as f:
             hash: str = f.readline()
 
@@ -36,6 +37,7 @@ def main(test_level: (int | None)):
             
             print("Currently in debug mode. Run this file with the command python mystery.py [num]\nwhere [num] represents the number of the function you wish to test.")
             # commenting the below out for now to prevent people from accidentally progressing
+            # Todo - uncomment this for deploying
             # run_levels(level)
     return
 
@@ -172,11 +174,93 @@ item drop-off location, considering he still has some items left to ship.
 Even if we don't find Ob, we've greatly narrowed down the area that Ob can be in, 
 increasing our chances of success tenfold. Poco was right to put his faith in you.
 
-Now, all that's left is to find Ob and find the cause of his disappeaerance. 
+Now, all that's left is to find Ob and find the cause of his disappearance. You'll
+be joining Poco in his drive to the drop-off location.
 
-Continue to puzzles/part3.py to complete the case!
-""")
+~ [timeskip] ~
+
+You and Poco have made it to the item drop-off location, but there isn't a human 
+in sight! In fact, there's not really much of anything; just a single machine 
+surrounded by peeling walls and rusting gates. 
+
+The machine seems to be the sole entry method, but it only accepts coins.
+It also seems to be rather... delicate. If you shove in too many coins at once,
+it might break.
+
+Poco thinks this could be a good problem for you to solve, so he's leaving this
+one for you!
+
+Continue to puzzles/part3.py to complete the case!""")
+            print_divider()
             save_progress(11)
+            
+    # bust through the door or osmething or get past an obstacle
+    if level == 11:
+        if coin_change_test():
+            print(
+"""You've managed to get the right amount of money into the machine without it 
+breaking! The door shakes and slowly creaks. 
+
+Poco holds the door open for you to step in first. You do and you can't believe 
+your eyes.
+
+This should have been a place with shipping containers, overworked employees running
+everywhere, perhaps with one running up to you and Poco to ask what items you'd
+needed dropped off. 
+
+But no, instead you find a vast empty space with flickering lights and a small
+round table in the middle. Cards and chips are on the table and as for
+who's in the seats? Loco and Ob, both looking up from their game to stare at you. 
+
+"Congrats," Loco says. Ob is smiling.
+
+"Damn impressive for a junior, don't you think?" Ob says to Poco. Poco turns to 
+you and laughs.
+
+"Judging by the look on your face, I think I should inform you that this case 
+was staged for practice purposes. Loco, Ob and I are close friends." Poco gives 
+you a pat on the shoulder. "Be proud of yourself. You'll make a fine detective 
+in the years to come." 
+
+-------------------------------- Case Cracked! ---------------------------------
+
+Try out some leetcode questions if you found these kinds of programming questions 
+to be interesting! 
+
+Leetcode questions here: https://leetcode.com/problem-list/array/ 
+(These are just questions involving arrays, feel free to explore around for other 
+kinds of questions)
+
+Additionally, high school students can compete in the AIO (Australian Informatics Olympiad).
+This will give you a good taste of competitive programming! Anyone of any skill 
+level can join and it’s a good experience to try out!
+
+AIO website: https://www.amt.edu.au/aio 
+
+You can try some AIO questions here: https://orac2.info/hub/personal/""")
+            print_divider()
+            save_progress(12)
+    if level == 12:
+        print_divider()
+        print(
+"""Unfortunately there aren't any more questions here for you to complete, but 
+there are loads of resources on the web for you to discover!
+
+Try out some leetcode questions if you found these kinds of programming questions 
+to be interesting! 
+
+Leetcode questions here: https://leetcode.com/problem-list/array/ 
+(These are just questions involving arrays, feel free to explore around for other 
+kinds of questions)
+
+Additionally, high school students can compete in the AIO (Australian Informatics Olympiad).
+This will give you a good taste of competitive programming! Anyone of any skill 
+level can join and it’s a good experience to try out!
+
+AIO website: https://www.amt.edu.au/aio 
+
+You can try some AIO questions here: https://orac2.info/hub/personal/""")
+        print_divider()
             
     # =============================== Part 3 ===============================
 
