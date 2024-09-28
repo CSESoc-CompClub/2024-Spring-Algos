@@ -1,5 +1,3 @@
-# Note: ALl test cases will be visible to students in part 1.
-
 # ==============================================================================
 # =================================== IMPORTS ==================================
 # ==============================================================================
@@ -7,6 +5,13 @@
 from puzzles.part1  import *
 from solutions.part1_sol import *
 from internal.autotesting.generic_test import *
+from puzzles.part1  import *
+from solutions.part1_sol import *
+from internal.autotesting.generic_test import *
+from typing import Callable
+from enum import Enum
+import random
+import timeit
 
 # ==============================================================================
 # ================================= QUESTION 1 =================================
@@ -77,13 +82,6 @@ def search_test() -> bool:
 # ================================= QUESTION 4 =================================
 # ==============================================================================
 
-# returns whether the search function written by the student passed
-# the time limit (True if passed, False if not passed)
-def timer(func) -> bool:
-    # TODO - dev: implement this
-    # If time > 3 seconds, fail the test
-    pass
-
 def fast_search_test() -> bool:
     name = "fast_search"    
     
@@ -91,18 +89,31 @@ def fast_search_test() -> bool:
     if not implemented_test(fast_search([],0), name):
         return False
     
-    # TODO - dev: add 2 LARGE tests case (with and without targets) to make sure the student stays under the 3 second time limit
-    # feel free to modify the below however you see fit to get things to work
-    tests = [[[1,2,3,4,5],5], [[1,2,3,4,5],6], [[],1], "large test with target", "large test without target"]
+    print("Testing will take a few seconds!")
+    
+    arr_length = 5_000_000
+    arr = random.sample(range(1, arr_length + 1), arr_length)
+    arr.sort()
+    
+    test1_target = random.choice(arr)
+    tests = [[arr, test1_target, arr.index(test1_target)], [arr, -1, -1], [[], 1, -1]]
+    
     for i, test in enumerate(tests):
-        if not timer(test):
-            print(f"Your {name} function took over 3 seconds! Test failed.")
+        [files, target, expected] = test
+        
+        start_time = timeit.default_timer()
+        res = fast_search(files, target)
+        
+        if timeit.default_timer() - start_time > 0.1:
+            print(f"Your {name} function took over 0.1 seconds! Test failed.")
+            return False
+        elif res != expected:
+            print(f"Your {name} function returned the incorrect result! Test failed.")
             return False 
         else:
             print(f"Test case {i} passed!")
     
-    return passed_test(name, Qid[name])
-
+    return passed_test(name, 4)
 
 # ==============================================================================
 # ================================= QUESTION 5 =================================
