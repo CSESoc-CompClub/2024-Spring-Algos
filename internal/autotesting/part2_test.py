@@ -98,9 +98,18 @@ def safe_cracking_test() -> bool:
         return False
     
     # Todo - internals
-    tests = [([20302], 2, 5), (), (), (), ()]
-    test_sols = [True, (), (), (), ()]
+    tests = [([20302], 2, 5), ([20305], 2, 5), ([20302], 3, 5), ([20302], 2, 6), ([20302, 20305], 2, 5), ([20305, 20302], 2, 5), ([305070503, 13015017071051031, 2030405040302], 6, 46), ([20305, 20306], 2, 5), ([3050709011, 13015017071051031, 1012], 3, 13)]
+    test_sols = [20302, 0, 0, 0, 20302, 20302, 13015017071051031, 0, 0]
     
+    for i, test in enumerate(tests):
+        student = safe_cracking(test[0], test[1], test[2])
+        solution = test_sols[i]
+        if (student != solution):
+            print(f"Test case {i} with n = {test} failed.")
+            return compare_test(student, solution)
+        else:
+            print(f"Test case {i} passed!")
+
     return passed_test(name, Qid[name])
 
 # ==============================================================================
