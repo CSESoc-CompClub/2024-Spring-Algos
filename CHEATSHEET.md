@@ -1,16 +1,5 @@
 # 2024 Spring - Problem Solving & Algorithms - Cheatsheet
 
-Include: 
-- for loops [for i in range(len()) & for i in items:] - inbuilt (including going backwards with range)
-- list splicing - inbuilt
-- str() - inbuilt
-- .split() - inbuilt
-- linear search - provided / in lecture
-- binary search - provided / in lecture
-- max sub_array (kadanes algorithm) - provided / in lecture
-
-
-[2024 Spring - Problem Solving \& Algorithms - Cheatsheet](#2024-spring---problem-solving--algorithms---cheatsheet)
 - [2024 Spring - Problem Solving \& Algorithms - Cheatsheet](#2024-spring---problem-solving--algorithms---cheatsheet)
   - [For Loops](#for-loops)
   - [List Splicing](#list-splicing)
