@@ -246,20 +246,23 @@ You can try some AIO questions here: https://orac2.info/hub/personal/""")
 """Unfortunately there aren't any more questions here for you to complete, but 
 there are loads of resources on the web for you to discover!
 
-Try out some leetcode questions if you found these kinds of programming questions 
-to be interesting! 
+Try out some leetcode questions if you found these kinds of programming 
+questions to be interesting! There's also hackerrank, projecteuler, codeforces, 
+etc.
 
-Leetcode questions here: https://leetcode.com/problem-list/array/ 
-(These are just questions involving arrays, feel free to explore around for other 
-kinds of questions)
+Leetcode: https://leetcode.com
+Project Euler: https://projecteuler.net/archives 
+Hackerrank: https://www.hackerrank.com/dashboard 
+Codeforces: https://codeforces.com/problemset 
 
-Additionally, high school students can compete in the AIO (Australian Informatics Olympiad).
-This will give you a good taste of competitive programming! Anyone of any skill 
-level can join and it’s a good experience to try out!
+Additionally, high school students can compete in the AIO (Australian 
+Informatics Olympiad) - which will give you a good taste of competitive 
+programming! Anyone of any skill level can join and it's a good experience to 
+try out! There's also UNSW Cupcake which is similar to AIO.
 
 AIO website: https://www.amt.edu.au/aio 
-
-You can try some AIO questions here: https://orac2.info/hub/personal/""")
+You can try some past AIO questions here: https://orac2.info/hub/personal/  
+UNSW cupcake: https://cupcake.cse.unsw.edu.au/""")
         print_divider()
             
     # =============================== Part 3 ===============================
