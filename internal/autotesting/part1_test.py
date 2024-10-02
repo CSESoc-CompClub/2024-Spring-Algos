@@ -73,8 +73,24 @@ def search_test() -> bool:
     if not implemented_test(search([],0), name):
         return False
     
-    # TODO - internals: complete this
-    tests = []
+    tests = [
+        [[2, 3, 5, 1, 4], 5, 2],
+        [[2, 3, 5, 1, 4], 6, -1],
+        [[7, 3, 5, 1, 4], 7, 0],
+        [[2, 3, 5, 1, 4], 4, 4],
+        [[], 3, -1],
+        [[3], 3, 0],
+        [[2], 3, -1]
+    ]
+    
+    for i, test in enumerate(tests):
+        student = search(test[0], test[1])
+        solution = test[2]
+        if student != solution:
+            print(f"Test case {i} with files = {test[0]} & target = {test[1]} failed.")
+            return compare_test(student, solution)
+        else:
+            print(f"Test case {i} passed!")
     
     return passed_test(name, Qid[name])
 
@@ -126,7 +142,23 @@ def monthly_crime_test() -> bool:
     if not implemented_test(monthly_crime([]), name):
         return False
     
-    # TODO - internals: complete this
-    tests = []
+    tests = [
+        [[1, -1, 5, 1, -3, 0, 1, -1, -3, 1, 3, 4], [1,3,4]],
+        [[], []],
+        [[4], [4]],
+        [[-4], [-4]],
+        [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5]],
+        [[-3, -5, -2, -8, -6], [-2]],
+        [[-2,1,-3,4,-1,2,1,-5,4], [4,-1,2,1]],
+    ]
+
+    for i, test in enumerate(tests):
+        student = monthly_crime(test[0])
+        solution = test[1]
+        if student != solution:
+            print(f"Test case {i} with array = {test[0]} failed.")
+            return compare_test(student, solution)
+        else:
+            print(f"Test case {i} passed!")
     
     return passed_test(name, Qid[name])
