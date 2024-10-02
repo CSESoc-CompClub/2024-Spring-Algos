@@ -22,6 +22,8 @@ def is_palindrome(password: int) -> bool:
 # As an example, if n = 4, find_primes would return 7 as it is the fourth prime 
 # number since you have [2,3,4,7] 
 #
+# Note: the 100th prime is 541.
+#
 # Assumptions:
 #   0 < n < 100
 
