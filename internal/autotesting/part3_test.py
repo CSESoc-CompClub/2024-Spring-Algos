@@ -14,7 +14,7 @@ def coin_change_test() -> bool:
     name = "coin_change"
     
     # Check if the student implemented the function
-    if not implemented_test(coin_change([1, 2, 5], 11), name):
+    if not implemented_test(coin_change([], 0), name):
         return False
     
     # Todo - internals
@@ -34,6 +34,7 @@ def coin_change_test() -> bool:
 
     # Hidden test cases
     hidden_tests = [
+        ([], 0),
         ([0], 1),
         ([1, 3, 4], 6), 
         ([2, 5, 10], 18),
@@ -45,7 +46,7 @@ def coin_change_test() -> bool:
         ([1, 2, 3], 7)
     ]
     
-    hidden_sols = [-1, 2, -1, 2, -1, 1, 3, 2, 3]
+    hidden_sols = [-1, -1, 2, -1, 2, -1, 1, 3, 2, 3]
 
     for i, (coins, amount) in enumerate(hidden_tests):
         student = coin_change(coins, amount)
