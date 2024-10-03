@@ -124,7 +124,22 @@ def max_items_test() -> bool:
         return False
     
     # Todo - internals
-    tests = []
+    tests = [([4,7,4,3,5], 13), ([], 10), ([5], 10), ([15], 10), ([10], 10), ([1, 2, 3, 4], 10), ([4, 3, 2, 1], 10), ([4, 3, 2, 1], 7), ([11, 12, 13], 10), ([5, 6, 7], 10), ([23, 13, 42], 100), ([8,4,10,6,2,1,1], 6), ((100 * [20]) + ([10] * 100), 727), ([1, 2, 3, 5005129], 5005135), ([16, 15, 6, 7, 3], 15), ([14, 1, 13, 2, 12, 3, 11, 4, 10, 5, 9, 6, 8, 7], 15) ]
+    test_sols = [3, 0, 1, 0, 1, 4, 4, 3, 0, 1, 3, 3, 72, 4, 2, 5]
+
+    if len(tests) != len(tests):
+        print(f"Something went wrong with test file - {name}")
+        return False
     
+    for i, test, in enumerate(tests):
+        original = test[0].copy()
+        student = max_items(test[0], test[1])
+        solution = test_sols[i]
+        if (student != solution):
+            print(f"Test case {i} with n = ({original}, {test[1]}) failed.")
+            return compare_test(student, solution)
+        else:
+            print(f"Test case {i} passed!")
+
     return passed_test(name, Qid[name])
 

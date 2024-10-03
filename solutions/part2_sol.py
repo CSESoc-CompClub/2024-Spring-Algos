@@ -36,7 +36,7 @@ def max_items_sol(items: list[int], weight: int) -> int:
     total = 0
     bought = 0
     for i in range(len(items)):
-        if (total + items[i] < weight):
+        if (total + items[i] <= weight):
             bought += 1
             total += items[i]
         else:
