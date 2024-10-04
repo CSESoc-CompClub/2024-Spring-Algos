@@ -1,2 +1,0 @@
-- Sieve (generate_primes in internals/provided.py) generates primes up to n, should instead generate first n primes.
-- Provided solution for has_combination_sol is incorrect. Trying to add strings and compare to int n.
