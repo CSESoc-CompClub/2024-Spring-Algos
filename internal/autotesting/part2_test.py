@@ -5,7 +5,6 @@
 # ==============================================================================
 
 from puzzles.part2 import *
-from solutions.part2_sol import *
 from internal.autotesting.generic_test import *
 
 # ==============================================================================

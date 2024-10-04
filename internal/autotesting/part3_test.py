@@ -3,7 +3,6 @@
 # ==============================================================================
 
 from puzzles.part3 import *
-from solutions.part3_sol import *
 from internal.autotesting.generic_test import *
 
 # ==============================================================================
