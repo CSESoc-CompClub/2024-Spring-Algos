@@ -3,19 +3,23 @@
 # ==============================================================================
 
 from puzzles.part1 import *
-from solutions.part1_sol import *
 from internal.autotesting.generic_test import *
 from puzzles.part1 import *
-from solutions.part1_sol import *
 from internal.autotesting.generic_test import *
-from typing import Callable
-from enum import Enum
 import random
 import timeit
 
 # ==============================================================================
 # ================================= QUESTION 1 =================================
 # ==============================================================================
+
+
+def fizzbuzz_sol(n: int) -> list[int]:
+    a = []
+    for i in range(n):
+        if (i % 3 == 0 or i % 5 == 0) and not (i % 3 == 0 and i % 5 == 0):
+            a.append(i)
+    return a
 
 
 def fizzbuzz_test() -> bool:
@@ -43,6 +47,13 @@ def fizzbuzz_test() -> bool:
 # ==============================================================================
 # ================================= QUESTION 2 =================================
 # ==============================================================================
+
+
+def array_shift_sol(arr: list[int], n: int) -> list[int]:
+    if len(arr) == 0 or len(arr) == 1:
+        return arr
+    n = n % len(arr)
+    return arr[n - 1 :] + arr[: n - 1]
 
 
 def array_shift_test() -> bool:
