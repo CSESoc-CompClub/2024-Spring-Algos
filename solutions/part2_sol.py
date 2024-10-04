@@ -9,7 +9,7 @@ def is_palindrome_sol(password: int) -> bool:
 
 # find nth prime
 def find_primes_sol(n: int) -> int:
-    primes = generate_primes(100)
+    primes = generate_primes(541) # 541 is the 100th prime
     count = 0
     for num in primes:
         if num != 0:
@@ -22,6 +22,10 @@ def find_primes_sol(n: int) -> int:
 def has_combination_sol(password: int, n: int) -> bool:
     # Convert password to list version
     list_pass = str(password).split("0")
+    # Convert passwords back to integer form
+    for i in range(len(list_pass)):
+        list_pass[i] = int(list_pass[i])
+    # Two sum
     for i in range(len(list_pass)):
         for j in range(i + 1, len(list_pass)):
             if list_pass[i] + list_pass[j] == n:
@@ -31,13 +35,19 @@ def has_combination_sol(password: int, n: int) -> bool:
 
 def safe_cracking_sol(passwords: int, nth_prime: int, prime_sum: int) -> int:
     for password in passwords:
+        # must convert the password to its list form for find_primes to work
+        # this is the same as what they did in has_combination
+        list_pass = str(password).split("0")
+        # Convert passwords back to integer form
+        for i in range(len(list_pass)):
+            list_pass[i] = int(list_pass[i])
         if (
-            is_palindrome_sol(password)
-            and has_combination_sol(password, prime_sum)
-            and (find_primes_sol(nth_prime) in password)
+            is_palindrome(password)
+            and has_combination(password, prime_sum)
+            and (find_primes(nth_prime) in list_pass)
         ):
             return password
-    return 0  # this is unnecessary for the student to implement but will be used here for debugging purposes
+    return 0 # this return 0 is not necessary since each autotest is guaranteed to have a valid password
 
 
 def max_items_sol(items: list[int], weight: int) -> int:
