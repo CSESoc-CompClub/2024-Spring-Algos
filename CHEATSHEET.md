@@ -4,7 +4,11 @@ This is an information sheet on functions/python methods you'll be using as you 
 
 - [2024 Spring - Problem Solving \& Algorithms - Cheatsheet](#2024-spring---problem-solving--algorithms---cheatsheet)
   - [For Loops](#for-loops)
-  - [List Splicing](#list-splicing)
+  - [List Methods](#list-methods)
+    - [Accessing List Items](#accessing-list-items)
+    - [List Append](#list-append)
+    - [List Splicing](#list-splicing)
+    - [List Sorting](#list-sorting)
   - [str()](#str)
   - [split()](#split)
   - [Sieve of Eratosthenes](#sieve-of-eratosthenes)
@@ -28,8 +32,24 @@ In general, there are 4 components that define a `for` loop.
 
 Much like other programming languages, Python is zero indexed, meaning that numbers start from 0 instead of 1. Meaning that declaring `range(10)` actually gives you 0-9 instead of 1-10.
 
-## List Splicing
-**Inbuilt into Python**. List splicing refers to the process of extracting subset(s) from a list or array. This basically allows you to select sections or portions of a list. 
+## List Methods
+An array is the same as a list in Python.
+### Accessing List Items
+**Inbuilt into Python.** You can access list items by referring to their index number.
+```
+list = ["apple", "banana", "orange"]
+print(list[2]) # "banana"
+```
+### List Append
+**Inbuilt into Python.** Adds an item to the end of a list.
+```
+list = []
+list.append(1)
+list.append(2)
+print(list) # [1, 2]
+```
+### List Splicing
+**Inbuilt into Python**. Refers to the process of extracting subset(s) from a list or array. This allows you to select sections or portions of a list. 
 
 Let's say you have the word **pineapple**. You *splice* your **pineapple** and extract the word **apple**. This is basically list splicing, but instead of fruits, you are splicing arrays and lists.
 
@@ -42,6 +62,17 @@ print(apple)
 To list splice, simply refer to your list and in square brackets declare your **starting index**, **ending index** and your **step**. So, you get something like: `list[start:stop:step]`.
 
 Note that the stop index is exclusive. This means that for example from **pineapple** you want to splice the string "pine". Since the ending letter 'e' is in index 3, you would want to stop at 4 since the stop index is not inclusive.
+
+### List Sorting
+**Inbuilt into Python**. Python allows you to sort lists, which defaults to
+sorting in ascending order. 
+
+```
+numbers = [3,6,2,1,4,5]
+numbers.sort()
+print(numbers) # prints[1,2,3,4,5,6]
+```
+
 
 ## str()
 **Inbuilt into Python**. `str()`  transforms whatever you input into a string.
