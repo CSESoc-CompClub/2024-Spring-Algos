@@ -15,6 +15,7 @@ from internal.provided import generate_primes, print_primes
 
 
 def is_palindrome(password: int) -> bool:
+    # Todo - complete this function!
     return None
 
 
@@ -31,6 +32,7 @@ def is_palindrome(password: int) -> bool:
 
 
 def find_primes(n: int) -> int:
+    # Todo - complete this function!
     return None
 
 
@@ -53,6 +55,7 @@ def find_primes(n: int) -> int:
 
 
 def has_combination(password: int, n: int) -> bool:
+    # Todo - complete this function!
     return None
 
 
