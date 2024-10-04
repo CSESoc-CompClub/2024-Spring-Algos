@@ -19,6 +19,10 @@ Note that you **should not** be touching anything outside of the function implem
 in ``puzzles/part1.py``, ``puzzles/part2.py`` and ``puzzles/part3.py``. Messing around with other
 files could prevent you from using provided functions or reset your progress. 
 
+Additionally you are encouraged to use the cheatsheet, which is the file
+``CHEATSHEET.md``. It contains a lot of the information you need to solve most
+questions.
+
 To start, run ``mystery.py`` and navigate to ``puzzles/part1.py`` to fill out the functions!
 
 ## File layout
