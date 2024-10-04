@@ -13,24 +13,30 @@ Qid = {
     "coin_change": 11,
 }
 
+
 def print_divider():
-    print("================================================================================")
+    print(
+        "================================================================================"
+    )
+
 
 def implemented_test(result: any, func: str) -> bool:
     print_divider()
     print(f"------- Testing {func} -------")
-    if (result == None):
+    if result == None:
         print(f"{func} not implemented.")
         print_divider()
         return False
     print_divider()
     return True
 
+
 def compare_test(student: any, solution: any) -> bool:
     print(f"Your output: {student}")
     print(f"Expected output: {solution}")
     return False
-    
+
+
 def passed_test(name: str, num: int) -> bool:
     print(f"All tests passed. Question {num} ({name}) complete!")
     print_divider()

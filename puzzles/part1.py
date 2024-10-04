@@ -15,9 +15,11 @@ from internal.provided import max_subarray
 # Assumptions:
 #   n > 0
 
+
 def fizzbuzz(n: int) -> list[int]:
     # Todo - complete this function!
     return None
+
 
 """ ------------------------------ Question 2 ------------------------------ """
 # Given an array, shift it by n amount and return the shifted array.
@@ -29,9 +31,11 @@ def fizzbuzz(n: int) -> list[int]:
 #   len(arr) >= 0
 #   n > 0
 
+
 def array_shift(arr: list[int], n: int) -> list[int]:
     # Todo - complete this function!
     return None
+
 
 """ ------------------------------ Question 3 ------------------------------ """
 # You've been given a stack of randomly arranged files and Poco needs you to
@@ -47,9 +51,11 @@ def array_shift(arr: list[int], n: int) -> list[int]:
 # Assumptions:
 #   len(files) >= 0
 
+
 def search(files: list[int], target: int) -> int:
     # Todo - complete this function!
     return None
+
 
 """ ------------------------------ Question 4 ------------------------------ """
 # As if you weren't already overworked, you've now been given a HUMONGOUS stack
@@ -63,9 +69,11 @@ def search(files: list[int], target: int) -> int:
 # Assumptions:
 #   The files array is sorted in ascending order
 
+
 def fast_search(files: list[int], target: int) -> int:
     # Todo - complete this function!
     return None
+
 
 """ ------------------------------ Question 5 ------------------------------ """
 # Poco's notes that the crime rate in Cee City fluctuates over the year, and he
@@ -87,6 +95,7 @@ def fast_search(files: list[int], target: int) -> int:
 #
 # Hint: you only have to call one function to complete this task. Look at the
 # cheatsheet to see which function could work here!
+
 
 def monthly_crime(crime_rates: list[int]) -> list[int]:
     # Todo - complete this function!

@@ -1,17 +1,17 @@
 from internal.provided import *
 
-# This is the third file intended to be completed. 
+# This is the third file intended to be completed.
 #
-# This problem is meant to be challenging! Don't worry if you're struggling 
-# with it. Feel free to ask for help once you've made a good attempt at the 
+# This problem is meant to be challenging! Don't worry if you're struggling
+# with it. Feel free to ask for help once you've made a good attempt at the
 # problem!
 #
 """ ------------------------------ Question 11 ----------------------------- """
-# You are given an integer array "coins" representing coins of different 
+# You are given an integer array "coins" representing coins of different
 # denominations and an integer amount representing a total amount of money.
 #
-# Return the fewest number of coins that you need to make up that amount. 
-# If that amount of money cannot be made up by any combination of the coins, 
+# Return the fewest number of coins that you need to make up that amount.
+# If that amount of money cannot be made up by any combination of the coins,
 # return -1.
 #
 # Example cases:
@@ -27,6 +27,7 @@ from internal.provided import *
 #
 # Assumptions:
 #   You have an infinite number of each kind of coin.
+
 
 def coin_change(coins: list[int], amount: int) -> int:
     # Todo - complete this function!
