@@ -28,26 +28,28 @@ def binary_search(nums: list[int], target: int) -> int:
 
 # Modified Kadane's Algorithm. Returns the maximum subarray of a given array.
 def max_subarray(arr: list[int]) -> list[int]:
-    max_so_far = 0
-    current_max = 0
-    start_index = 0
-    end_index = 0
-    j = 0
+    if len(arr) == 0:
+        return []
 
-    for i in range(len(arr)):
-        current_max += arr[i]
+    max_so_far = arr[0]
+    current_max = arr[0]
+    start_index = 0
+    temp_start = 0
+    end_index = 0
+
+    for i in range(1, len(arr)):
+        if current_max + arr[i] > arr[i]:
+            current_max += arr[i]
+        else:
+            current_max = arr[i]
+            temp_start = i
 
         if current_max > max_so_far:
             max_so_far = current_max
-            start_index = j
+            start_index = temp_start
             end_index = i
 
-        if current_max < 0:
-            current_max = 0
-            j = i + 1
-
-    result_array = arr[start_index: end_index + 1]
-    return result_array
+    return arr[start_index:end_index + 1]
 
 # Returns a list of prime numbers less than a given positive integer.
 def generate_primes(n: int) -> list[int]:
