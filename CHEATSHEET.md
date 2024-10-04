@@ -9,8 +9,10 @@ This is an information sheet on functions/python methods you'll be using as you 
     - [List Append](#list-append)
     - [List Splicing](#list-splicing)
     - [List Sorting](#list-sorting)
+  - [int()](#int)
   - [str()](#str)
   - [split()](#split)
+  - [infinity](#infinity)
   - [Sieve of Eratosthenes](#sieve-of-eratosthenes)
   - [Linear Search](#linear-search)
   - [Binary Search](#binary-search)
@@ -73,13 +75,21 @@ numbers.sort()
 print(numbers) # prints[1,2,3,4,5,6]
 ```
 
+## int()
+**Inbuilt into Python**. `int()` transforms whatever you input into a number.
+```
+string = "10"
+number = int(string) # 10
+```
+
+In this example, the `number` variable represents a number value equal to 10.
 
 ## str()
 **Inbuilt into Python**. `str()`  transforms whatever you input into a string.
 
 ```
 number = 10
-string = str(10)
+string = str(number) # "10"
 ```
 
 In this example, the `string` variable represents a string value equal to "10".
@@ -102,6 +112,19 @@ splitName = fullName.split(" ", 1)
 
 print(splitName) # ['Robert', 'Downey Jr.']
 ```
+
+## Infinity
+**Inbuilt into Python.** You can represent the number infinity in python with ``float('inf')``. This is good for when you need to find minimum values and must initialise an array to an extremely large number
+
+```
+arr = [1,2,3,4,5]
+
+for i in range(len(arr)):
+  arr[i] = float('inf')
+
+print(arr) # [inf, inf, inf, inf, inf]
+```
+
 ## Sieve of Eratosthenes
 **Provided function**. Allows you to find all prime numbers up to a certain give number, n. Prime numbers
 start at 2.
