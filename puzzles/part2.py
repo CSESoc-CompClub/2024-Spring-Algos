@@ -39,11 +39,12 @@ def find_primes(n: int) -> int:
 """ ------------------------------ Question 8 ------------------------------ """
 # You are required to implement the function has_combation, which will return true
 # if there are two numbers in the list form of password that sum up to n,
-# and false if otherwise.
+# and false if otherwise. You are to split the password numbers by 0.
 #
 # For example, if you were given password = 30193072 and n = 75, you would first
-# convert 30193072 into [3, 193, 72] then there would be two numbers 72 and 3
-# that sum up to 75, so has_combination would return true.
+# convert 30193072 into [3, 193, 72] bysplitting the number into a list by the 0s. 
+# Then there would be two numbers 72 and 3 hat sum up to 75, so has_combination 
+# would return true.
 #
 # Alternatively, if n = 76, then there are no two numbers in the list [3, 193, 72]
 # so has_combination will return false.
@@ -62,7 +63,7 @@ def has_combination(password: int, n: int) -> bool:
 """ ------------------------------ Question 9 ------------------------------ """
 # We know that Ob's passwords:
 #   1. Are palindromes
-#   2. Contains the nth prime number the password's list form
+#   2. Contains the nth prime number in the password's list form
 #   3. Contains two numbers that sum up to a given number in the password's list form
 #
 # Example cases:
