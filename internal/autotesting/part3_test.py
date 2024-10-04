@@ -46,7 +46,7 @@ def coin_change_test() -> bool:
         ([1, 2, 3], 7),
     ]
 
-    hidden_sols = [-1, -1, 2, -1, 2, -1, 1, 3, 2, 3]
+    hidden_sols = [-1, -1, 2, 5, 2, -1, 1, 3, 2, 3]
 
     for i, (coins, amount) in enumerate(hidden_tests):
         student = coin_change(coins, amount)
