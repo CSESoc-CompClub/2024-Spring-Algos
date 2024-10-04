@@ -19,26 +19,19 @@ from internal.progress import read_progress, reset_progress, save_progress
 # ========== MAIN RUNNING SCRIPT ==========
 
 def main(test_level: (int | None)):
-    if test_level != None:
-        run_levels(int(test_level))
-    else:
-        # Attempt to read what level the user is one
-        with open("progress.txt", "r") as f:
-            hash: str = f.readline()
-
-            level: int
-            try:
-                level: int = read_progress(hash)
-            except ValueError as e:
-                print(f"Error: {e}")
-                print("Resetting progress...")
-                reset_progress()
-                level: int = 0
-            
-            print("Currently in debug mode. Run this file with the command python mystery.py [num]\nwhere [num] represents the number of the function you wish to test.")
-            # commenting the below out for now to prevent people from accidentally progressing
-            # Todo - uncomment this for deploying
-            # run_levels(level)
+    # Attempt to read what level the user is one
+    with open("progress.txt", "r") as f:
+        hash: str = f.readline()
+        level: int
+        try:
+            level: int = read_progress(hash)
+        except ValueError as e:
+            print(f"Error: {e}")
+            print("Resetting progress...")
+            reset_progress()
+            level: int = 0
+        
+        run_levels(level)
     return
 
 def run_levels(level: int):
@@ -224,20 +217,23 @@ in the years to come."
 
 -------------------------------- Case Cracked! ---------------------------------
 
-Try out some leetcode questions if you found these kinds of programming questions 
-to be interesting! 
+Try out some leetcode questions if you found these kinds of programming 
+questions to be interesting! There's also hackerrank, projecteuler, codeforces, 
+etc.
 
-Leetcode questions here: https://leetcode.com/problem-list/array/ 
-(These are just questions involving arrays, feel free to explore around for other 
-kinds of questions)
+Leetcode: https://leetcode.com
+Project Euler: https://projecteuler.net/archives 
+Hackerrank: https://www.hackerrank.com/dashboard 
+Codeforces: https://codeforces.com/problemset 
 
-Additionally, high school students can compete in the AIO (Australian Informatics Olympiad).
-This will give you a good taste of competitive programming! Anyone of any skill 
-level can join and it’s a good experience to try out!
+Additionally, high school students can compete in the AIO (Australian 
+Informatics Olympiad) - which will give you a good taste of competitive 
+programming! Anyone of any skill level can join and it's a good experience to 
+try out! There's also UNSW Cupcake which is similar to AIO.
 
 AIO website: https://www.amt.edu.au/aio 
-
-You can try some AIO questions here: https://orac2.info/hub/personal/""")
+You can try some past AIO questions here: https://orac2.info/hub/personal/  
+UNSW cupcake: https://cupcake.cse.unsw.edu.au/""")
             print_divider()
             save_progress(12)
     if level == 12:
@@ -268,9 +264,5 @@ UNSW cupcake: https://cupcake.cse.unsw.edu.au/""")
     # =============================== Part 3 ===============================
 
 if __name__ == "__main__":
-    # the second argument is for debugging purposes
-    if (len(sys.argv) == 2):
-        test_level = sys.argv[1]
-    else:
-        test_level = None
+    test_level = 0
     main(test_level)
