@@ -58,7 +58,7 @@ def array_shift_sol(arr: list[int], n: int) -> list[int]:
     n = n % len(arr)
     
     # Slice, rearrange and recombine the arrays
-    return arr[n - 1 :] + arr[: n - 1]
+    return arr[-n:] + arr[:-n]
 
 
 def array_shift_test() -> bool:
