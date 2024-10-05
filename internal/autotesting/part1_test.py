@@ -50,15 +50,15 @@ def fizzbuzz_test() -> bool:
 
 
 def array_shift_sol(arr: list[int], n: int) -> list[int]:
-    # Ignore arrays of size 0 or 1
+    # Ignore arrays of length 0 or 1
     if len(arr) == 0 or len(arr) == 1:
         return arr
-
-    # Normalise the shift so that it is less than the length of the array
+    
+    # Normalise n so that it is less than the length of the array
     n = n % len(arr)
     
-    # Slice the array, rearrange and combine it
-    return arr[-n:] + arr[:-n]
+    # Slice, rearrange and recombine the arrays
+    return arr[n - 1 :] + arr[: n - 1]
 
 
 def array_shift_test() -> bool:
